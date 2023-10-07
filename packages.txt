@@ -1,0 +1,92 @@
+1.What are the four access modifiers available in java and what is their significance in terms of class,method, and variable accessibility?
+*Default
+*Public
+*Package
+*protected
+i) DEFAULT:
+        Declarations are visible only with in the package.
+Example:
+package defaultpackage;
+class Logic{
+void message(){
+system.out.printIn("What is your name");
+}}
+ii)PRIVATE:
+        Declarations are visible with in the class only.
+Example:
+package privatepackage;
+class A{
+Private void display(){
+system.out.printIn("bala");
+}}
+Class B{
+Public static void main(String args[]){
+A obj=new A();
+obj.display();
+Output: Error: display() has private access in A.
+iii)PROTECTED:
+        Declarations are visible with in the package or all subclass.
+Example:
+package protectedpackage1;
+public class A{
+protected void display(){
+system.out.printIn("bala");}}
+package protectedpackage2;
+import protectedpackage1;
+classB extendsA
+{
+public static void main(Stringargs[]){
+B obj=new B();
+obj.display();
+Output:
+bala
+
+iv)PUBLIC: 
+        Declarations are visible everywhere.
+package protectedpackage1;
+public class A{
+protected void display(){
+system.out.printIn("bala");}}
+package protectedpackage2;
+import protectedpackage1;
+classB extendsA
+{
+public static void main(Stringargs[]){
+B obj=new B();
+obj.display();
+Output:
+bala
+
+2.What is the difference between Exception and error?
+i)Exceptions:
+*It can be classified into two categories are checked and unchecked exception.
+*It occurs at complie time or run time.
+*Only checked exceptions are known to the compiler.
+*It is mainly caused by the application itself.
+*It belongs to java.lang.Exception package.
+Example: Checked Exceptions: SQL Exception,IOException.
+Unchecked Exceptions: ArrayIndexOutOfBound Exception,NullpointerException,Arithmatic Exception.
+ii)Error:
+*All errors in java unchecked.
+*It occurs at run time.
+*Errors will not be known complier.
+*It is mostly caused by the environment in which the application is running.
+*It belongs to java.lang.Error package.
+Example: Java.StackOverFlow,Java.lang.outofMemoryError.
+
+3.What is difference between checked Exception and unchecked Exception?
+i)Checked Exception:
+*Checked exceptions occur during complie time when the source is being converted into an executable code.
+*The complier checks the checked exception.
+*Checked exceptions can be manually created.
+*This type of exception is considered as a subclass of the exception class.
+*The java virtual machine requires the checked exception to be caught or handled.
+Example: File not found exception,No such field exception,Interrupted Exception,Class Not found Exception.
+ii)Unchecked Exception:
+*Unchecked exceptions occur during runtime when the program is in execution.
+*The complier does not check these types of execptions.
+*Unchecked exceptions can also be manually created.
+*Unchecked exceptions occur during runtime,therefor,they are not inculded in the execption class.
+*The java virtual machine does not require the unchecked exception to be caught or handled.
+Example: No such element Exception,Arithmetic Exception,Null ponter Exception, Array Index out of bound exception.
+
